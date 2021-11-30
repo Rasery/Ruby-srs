@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RubySrs</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <style>
+
+      .btn {
+          box-shadow: 0 0 3rem #EF99EF;
+      }
+
+      .navi {
+          text-decoration: none !important;
+          color: white !important;
+          font-size: 20pt !important;
+          font-style: oblique !important;
+      }
+
+      body {
+          background-image: url("https://cdn.pling.com/img/b/a/0/6/a4b76057cb4d45ccb4b5a0489a7f1f223053d1da4808d2612a89bd4223a9c104301c.jpg");
+      }
+
+      .neon-text {
+          color: white !important;
+          text-shadow: 0 0 7px #ec43ff,
+          0 0 10px purple,
+          0 0 21px purple,
+          0 0 42px purple,
+          0 0 82px purple,
+          0 0 92px purple,
+          0 0 102px purple,
+          0 0 151px #F7F7F7;
+      }
+
+      li {
+          text-decoration: none;
+      }
+  </style>
+
+</head>
+
+<body>
+
+<div class="bg-img"></div>
+
+<header class="site-header bg-dark sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="/" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto navi" role="img" viewBox="0 0 24 24">
+        <title>Product</title>
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+      </svg>
+    </a>
+    <!--    <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>-->
+    <!--    <a class="py-2 d-none d-md-inline-block" href="#">Product</a>-->
+    <!--    <a class="py-2 d-none d-md-inline-block" href="#">Features</a>-->
+    <!--    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>-->
+    <!--    <a class="py-2 d-none d-md-inline-block" href="#">Support</a>-->
+    <!--    <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>-->
+    <div class="container gap row">
+      <span class="col-2 neon-text"><%= link_to "Add report", new_report_path, :class => 'navi' %></span>
+      <span class="col-2 neon-text"><%= link_to "Add user", new_user_path, :class => 'navi' %></span>
+    </div>
+
+  </nav>
+</header>
+
+<%= yield %>
+
+<p class="m-5"></p>
+</body>
+</html>
